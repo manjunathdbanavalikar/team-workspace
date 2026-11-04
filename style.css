@@ -1,0 +1,235 @@
+/* --- BASE RESET & TOKENS --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: #f4f5f7;
+  color: #172b4d;
+}
+
+/* --- LEVEL 1 FLEX CONTAINER: APP SHELL --- */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top Bar: Full Width, Fixed Height */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 0 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  width: 320px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #fff;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* --- LEVEL 2 FLEX CONTAINER: MAIN BODY --- */
+.body {
+  display: flex;
+  flex: 1; /* Absorbs remaining viewport height below top bar */
+  overflow: hidden;
+}
+
+/* Fixed Rails: Sidebars hold width, won't grow or shrink */
+.left-sidebar, .right-sidebar {
+  flex: 0 0 240px; 
+  background-color: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #e2e8f0;
+  overflow-y: auto;
+}
+
+.right-sidebar {
+  border-right: none;
+  border-left: 1px solid #e2e8f0;
+}
+
+/* Navigation items */
+.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #334155;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-item.active, .nav-item:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+/* --- LEVEL 3 FLEX CONTAINER: MAIN CONTENT --- */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Stretches to take all leftover horizontal space */
+  padding: 28px;
+  background-color: #f8fafc;
+  overflow-y: auto;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.project-desc {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Task Cards Row Container */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  flex: 1 1 260px; /* Flexible card sizing */
+  min-height: 150px;
+}
+
+.task-card h3 {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.task-card p {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.due-date {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Tags & Avatars */
+.tag {
+  align-self: flex-start;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.tag-progress { background: #e0f2fe; color: #0369a1; }
+.tag-review { background: #fef3c7; color: #b45309; }
+.tag-todo { background: #f1f5f9; color: #475569; }
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #3b82f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+.avatar.sm { width: 24px; height: 24px; font-size: 10px; }
+
+/* Right Sidebar Elements */
+.sidebar-block { margin-bottom: 24px; }
+.sidebar-block h3 { font-size: 14px; margin-bottom: 12px; }
+
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.status { font-size: 11px; }
+.status.online { color: #16a34a; }
+.status.busy { color: #dc2626; }
+.status.offline { color: #94a3b8; }
+
+.activity-feed {
+  list-style: none;
+  font-size: 12px;
+  color: #475569;
+}
+.activity-feed li { margin-bottom: 8px; }
