@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevPulse Workspace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Level 1 Flex Container: App Shell (Column) -->
+  <div class="app">
+    
+    <!-- Top Navigation Bar -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo-icon">⚡</span>
+        <h2>DevPulse</h2>
+      </div>
+      <div class="topbar-center">
+        <input type="text" class="search-input" placeholder="Search tasks, docs, team..." />
+      </div>
+      <div class="user-profile">
+        <span class="notification">🔔</span>
+        <div class="avatar main-avatar">AK</div>
+      </div>
+    </header>
+
+    <!-- Level 2 Flex Container: Main Body (Row) -->
+    <div class="body">
+      
+      <!-- Left Sidebar (Fixed Rail) -->
+      <aside class="left-sidebar">
+        <div class="section-title">NAVIGATION</div>
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active">📊 Dashboard</a>
+          <a href="#" class="nav-item">✅ My Tasks</a>
+          <a href="#" class="nav-item">📅 Calendar</a>
+          <a href="#" class="nav-item">📁 Files & Assets</a>
+          <a href="#" class="nav-item">⚙️ Workspace Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area (Stretchy Middle) -->
+      <!-- Level 3 Flex Container: Main Layout (Column) -->
+      <main class="main-content">
+        <header class="project-header">
+          <div>
+            <h1>Q4 Sprint: Mobile App Redesign</h1>
+            <p class="project-desc">Tracking layout components, API integrations, and release goals.</p>
+          </div>
+          <button class="btn-primary">+ New Task</button>
+        </header>
+
+        <!-- Nested Flex Row for Task Summary Cards -->
+        <div class="cards-grid">
+          
+          <div class="task-card">
+            <span class="tag tag-progress">In Progress</span>
+            <h3>Implement Flexbox Layout</h3>
+            <p>Refactor outer shell to use fixed sidebars and auto-stretchy content region.</p>
+            <div class="card-footer">
+              <span class="due-date">Due Tomorrow</span>
+              <div class="avatar sm">JS</div>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <span class="tag tag-review">In Review</span>
+            <h3>Authentication API Sync</h3>
+            <p>Connect backend auth headers to user workspace dashboard.</p>
+            <div class="card-footer">
+              <span class="due-date">Due Oct 28</span>
+              <div class="avatar sm">SL</div>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <span class="tag tag-todo">To Do</span>
+            <h3>Dark Mode Toggle Component</h3>
+            <p>Create reusable CSS variables for seamless theme switching.</p>
+            <div class="card-footer">
+              <span class="due-date">Due Nov 02</span>
+              <div class="avatar sm">MR</div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- Right Sidebar (Fixed Rail) -->
+      <aside class="right-sidebar">
+        <div class="sidebar-block">
+          <h3>Team Members</h3>
+          <div class="member-list">
+            
+            <div class="member-item">
+              <div class="avatar">JS</div>
+              <div class="member-info">
+                <strong>Jane Smith</strong>
+                <span class="status online">Online</span>
+              </div>
+            </div>
+
+            <div class="member-item">
+              <div class="avatar">SL</div>
+              <div class="member-info">
+                <strong>Sam Lee</strong>
+                <span class="status busy">In a Meeting</span>
+              </div>
+            </div>
+
+            <div class="member-item">
+              <div class="avatar">MR</div>
+              <div class="member-info">
+                <strong>Maria Rodriguez</strong>
+                <span class="status offline">Offline</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="sidebar-block">
+          <h3>Recent Activity</h3>
+          <ul class="activity-feed">
+            <li><strong>Sam</strong> updated task auth status</li>
+            <li><strong>Jane</strong> pushed 4 commits to main</li>
+            <li><strong>Maria</strong> joined workspace</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+</body>
+</html>
