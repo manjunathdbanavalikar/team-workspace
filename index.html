@@ -3,64 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineSphere - Stream Unlimited</title>
+  <title>StreamBox</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="app">
-    
-    <!-- Region 1: Navigation Bar -->
-    <nav class="nav">
-      <div class="logo">🎬 CineSphere</div>
-      <div class="links">
-        <a href="#">Home</a>
-        <a href="#">Movies</a>
-        <a href="#">Series</a>
-        <a href="#" class="btn-signin">Sign In</a>
-      </div>
-    </nav>
+  <!-- REGION 1: Navigation Bar -->
+  <nav class="nav">
+    <div class="logo">StreamBox</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Shows</a>
+      <a href="#">New & Popular</a>
+      <a href="#">Sign In</a>
+    </div>
+  </nav>
 
-    <!-- Region 2: Featured Hero Banner -->
-    <header class="banner">
-      <h1 class="title">Cyber Odyssey 2099</h1>
-      <p class="blurb">A lone rogue hacker unlocks an ancient galactic frequency that threatens to overwrite reality itself.</p>
+  <!-- REGION 2: Featured Banner -->
+  <header class="banner">
+    <div class="banner-content">
+      <span class="badge-featured">FEATURED TODAY</span>
+      <h1 class="title">Neon Skyline</h1>
+      <p class="description">A detective chases a signal through a sleepless city where nothing ever switches off.</p>
       <div class="banner-actions">
-        <button class="btn-play">▶ Play Now</button>
-        <button class="btn-details">ℹ More Info</button>
+        <button class="btn btn-primary">▶ Play</button>
+        <button class="btn btn-secondary">+ My List</button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Region 3: Show Cards Row -->
-    <section class="cards-section">
-      <h2>Trending Releases</h2>
+  <!-- REGION 3 (NEW SECTION): Genre Filter Row -->
+  <section class="filters">
+    <button class="pill" data-active="true">All</button>
+    <button class="pill">Thriller</button>
+    <button class="pill">Drama</button>
+    <button class="pill">Sci-Fi</button>
+    <button class="pill">Romance</button>
+    <button class="pill">Comedy</button>
+  </section>
+
+  <!-- REGION 4: Show Card Row -->
+  <main class="content-section">
+    <h2>Trending Now</h2>
+    <div class="card-row">
       
-      <div class="cards">
-        
-        <article class="card" data-new="true">
-          <h3>Solaris Protocol</h3>
-          <p class="genre">Sci-Fi · 2026</p>
-        </article>
-
-        <article class="card">
-          <h3>Echoes of Silence</h3>
-          <p class="genre">Drama · 2025</p>
-        </article>
-
-        <article class="card" data-new="true">
-          <h3>Midnight Velocity</h3>
-          <p class="genre">Action · 2026</p>
-        </article>
-
-        <article class="card">
-          <h3>Shadow Kingdom</h3>
-          <p class="genre">Fantasy · 2024</p>
-        </article>
-
+      <div class="card" data-new="true">
+        <div class="card-image">Cinderwood</div>
+        <div class="card-info">
+          <h3>Cinderwood</h3>
+          <p>Mystery · 1 Season</p>
+        </div>
       </div>
-    </section>
 
-  </div>
+      <div class="card">
+        <div class="card-image">Deep Harbor</div>
+        <div class="card-info">
+          <h3>Deep Harbor</h3>
+          <p>Drama · 2 Seasons</p>
+        </div>
+      </div>
+
+      <div class="card" data-new="true">
+        <div class="card-image">Paper Moons</div>
+        <div class="card-info">
+          <h3>Paper Moons</h3>
+          <p>Romance · 1 Season</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">Low Tide</div>
+        <div class="card-info">
+          <h3>Low Tide</h3>
+          <p>Thriller · 3 Seasons</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
 
 </body>
 </html>
